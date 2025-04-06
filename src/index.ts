@@ -41,8 +41,8 @@ app.post('/api/gemini/generate-image', async (c) => {
       },
       body: JSON.stringify(requestBody)
     })
-
     const data = await response.json()
+    console.log("successful-image")
     return c.json(data)
   } catch (error) {
     console.error('Error proxying request to Gemini API:', error)
